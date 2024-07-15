@@ -1,0 +1,11 @@
+<p>show-post works!</p>
+
+<ul>
+    <li *ngFor="let post of allPost"> {{post.title}}, {{post.author}}
+        <button [routerLink]="['/detail',post.id]">Detail</button>
+        <button (click)="deletePost(post.id)">Delete</button>
+        <button [routerLink]="['/update-post', post.id]">Update</button>
+    </li>
+   
+</ul>
+
